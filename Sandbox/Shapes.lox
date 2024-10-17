@@ -1,0 +1,38 @@
+class Shape {
+    getName(){
+        return "This is a shape";
+    }
+    toString(){
+        return "shape";
+    }
+}
+
+class Circle < Shape {
+    init(radius) {
+        this.radius = radius;
+        this.volume = 3.14 * radius * radius;
+        this.surface_area = 3.14 * 2 * radius;
+    }
+
+    getVolume(){
+        return this.volume;
+    }
+
+    getSurfaceArea(){
+        return this.surface_area;
+    }
+
+    toString(){
+        return "circle";
+    }
+}
+
+var big_circle = Circle(3);
+print "Volume:";
+print big_circle.getVolume();
+print "Surface area:";
+print big_circle.getSurfaceArea();
+print "Name:";
+print big_circle.getName();
+print "";
+print big_circle.toString();
